@@ -1,0 +1,16 @@
+{
+  "name": "proyectofinalcoder-carrizo",
+  "version": "1.0.0",
+  "description": "Este es el proyecto final para la entrega de CoderHouse",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1,",
+    "build-css": "node-sass --include-path scss scss/style.scss css/main.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
