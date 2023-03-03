@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import "variables" ;
+@import "funciones";
+@import "index";
+
+nav{
+
+    .container-fluid{
+        
+        .container{
+
+            background-color: aqua;
+            
+        }
+
+        #navbarNav{
+
+            ul{
+
+                li{
+                    margin: .5rem;
+                    
+                    a{
+                        width: 100%;
+                        background-color: gray;
+                        padding: .5rem 1rem;
+                        border: solid .15rem black;
+                        border-radius: 20%;
+
+                        &:hover{
+                            background-color: rgb(83, 83, 83);
+                            color: white;
+                            transform: scale(1.1);
+                        }
+                    }                    
+                }
+            }
+        }
+    }
+}

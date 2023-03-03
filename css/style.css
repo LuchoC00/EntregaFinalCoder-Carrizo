@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+nav .container-fluid .container {
+  background-color: aqua; }
+
+nav .container-fluid #navbarNav ul li {
+  margin: .5rem; }
+  nav .container-fluid #navbarNav ul li a {
+    width: 100%;
+    background-color: gray;
+    padding: .5rem 1rem;
+    border: solid .15rem black;
+    border-radius: 20%; }
+    nav .container-fluid #navbarNav ul li a:hover {
+      background-color: #535353;
+      color: white;
+      transform: scale(1.1); }
