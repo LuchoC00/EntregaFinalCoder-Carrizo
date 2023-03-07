@@ -89,13 +89,13 @@
                 .caja-tarjetas{
                     background-color: lightgreen;
 
-                    display: flex;
+                    @include flex-center;
                     flex-wrap: wrap;
                     justify-content: flex-start;
 
                     .tarjeta{
                         background-color: greenyellow;
-                        width: 18%;
+                        width: $tamaño-tarjeta;
                         margin: .5rem;
 
                         @include tarjeta-estilo;                                            
@@ -125,6 +125,15 @@
                     }
                 }
             }
+        }
+
+        .seccion-3{
+            @extend .seccion-2;
+            grid-area: seccion-3;
+        }
+
+        .aside{
+            grid-area: aside;
         }
     }
 }

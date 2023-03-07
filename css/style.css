@@ -45,27 +45,29 @@
                 height: 100%; }
             .grilla-index .main .seccion-1 .ofertas-destacadas .ofertas-carrusel .carousel-inner .tarjeta .tarjeta-texto {
               height: 40%; }
-    .grilla-index .main .seccion-2 {
+    .grilla-index .main .seccion-2, .grilla-index .main .seccion-3 {
       grid-area: seccion-2;
       text-align: center;
       border: 5px solid black; }
-      .grilla-index .main .seccion-2 .ofertas-destacadas {
+      .grilla-index .main .seccion-2 .ofertas-destacadas, .grilla-index .main .seccion-3 .ofertas-destacadas {
         background-color: green;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         align-items: center; }
-        .grilla-index .main .seccion-2 .ofertas-destacadas .texto {
+        .grilla-index .main .seccion-2 .ofertas-destacadas .texto, .grilla-index .main .seccion-3 .ofertas-destacadas .texto {
           background-color: aquamarine;
           margin: 1rem; }
-        .grilla-index .main .seccion-2 .ofertas-destacadas .caja-tarjetas {
+        .grilla-index .main .seccion-2 .ofertas-destacadas .caja-tarjetas, .grilla-index .main .seccion-3 .ofertas-destacadas .caja-tarjetas {
           background-color: lightgreen;
           display: flex;
+          justify-content: center;
+          align-items: center;
           flex-wrap: wrap;
           justify-content: flex-start; }
-          .grilla-index .main .seccion-2 .ofertas-destacadas .caja-tarjetas .tarjeta {
+          .grilla-index .main .seccion-2 .ofertas-destacadas .caja-tarjetas .tarjeta, .grilla-index .main .seccion-3 .ofertas-destacadas .caja-tarjetas .tarjeta {
             background-color: greenyellow;
-            width: 18%;
+            width: 13rem;
             margin: .5rem;
             border: 5px solid black;
             border-radius: 5%;
@@ -74,7 +76,7 @@
             justify-content: center;
             align-items: center;
             flex-direction: column; }
-            .grilla-index .main .seccion-2 .ofertas-destacadas .caja-tarjetas .tarjeta .imagen {
+            .grilla-index .main .seccion-2 .ofertas-destacadas .caja-tarjetas .tarjeta .imagen, .grilla-index .main .seccion-3 .ofertas-destacadas .caja-tarjetas .tarjeta .imagen {
               height: 50%;
               display: flex;
               justify-content: center;
@@ -83,34 +85,37 @@
               margin: 5px;
               border-radius: 3%;
               border: 2px solid black; }
-              .grilla-index .main .seccion-2 .ofertas-destacadas .caja-tarjetas .tarjeta .imagen img {
+              .grilla-index .main .seccion-2 .ofertas-destacadas .caja-tarjetas .tarjeta .imagen img, .grilla-index .main .seccion-3 .ofertas-destacadas .caja-tarjetas .tarjeta .imagen img {
                 height: 100%; }
-            .grilla-index .main .seccion-2 .ofertas-destacadas .caja-tarjetas .tarjeta .tarjeta-texto {
+            .grilla-index .main .seccion-2 .ofertas-destacadas .caja-tarjetas .tarjeta .tarjeta-texto, .grilla-index .main .seccion-3 .ofertas-destacadas .caja-tarjetas .tarjeta .tarjeta-texto {
               height: 40%;
               background-color: gray;
               border-radius: 3%;
               margin: 5px; }
+    .grilla-index .main .seccion-3 {
+      grid-area: seccion-3; }
+    .grilla-index .main .aside {
+      grid-area: aside; }
 
 header {
   grid-area: header; }
-
-nav .container-fluid {
-  background-color: aquamarine; }
-  nav .container-fluid .container a {
-    background-color: aqua;
-    padding: .5rem .5rem 0 0; }
-    nav .container-fluid .container a:hover {
-      background-color: red;
-      color: white; }
-  nav .container-fluid #navbarNav ul li {
-    margin: .5rem; }
-    nav .container-fluid #navbarNav ul li a {
-      width: 100%;
-      background-color: gray;
-      padding: .5rem 1rem;
-      border: solid .15rem black;
-      border-radius: 20%; }
-      nav .container-fluid #navbarNav ul li a:hover {
-        background-color: #535353;
-        color: white;
-        transform: scale(1.1); }
+  header nav .container-fluid {
+    background-color: aquamarine; }
+    header nav .container-fluid .container a {
+      background-color: aqua;
+      padding: .5rem .5rem 0 0; }
+      header nav .container-fluid .container a:hover {
+        background-color: red;
+        color: white; }
+    header nav .container-fluid #navbarNav ul li {
+      margin: .5rem; }
+      header nav .container-fluid #navbarNav ul li a {
+        width: 100%;
+        background-color: gray;
+        padding: .5rem 1rem;
+        border: solid .15rem black;
+        border-radius: 20%; }
+        header nav .container-fluid #navbarNav ul li a:hover {
+          background-color: #535353;
+          color: white;
+          transform: scale(1.1); }
