@@ -6,15 +6,15 @@
 /* Estilos referenciales a la pagina "index" */
 .grilla-index {
   display: grid;
-  grid-template-columns: 4fr 1fr;
-  grid-template-rows: auto 3fr 1fr;
-  grid-template-areas: "header header" "main aside" "footer footer"; }
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto;
+  grid-template-areas: "header" "main" "footer"; }
   .grilla-index .main {
     grid-area: main;
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: 4fr 1fr;
     grid-template-rows: auto auto auto;
-    grid-template-areas: "seccion-1" "seccion-2" "seccion-3"; }
+    grid-template-areas: "seccion-1 aside" "seccion-2 aside" "seccion-3 aside"; }
     .grilla-index .main .seccion-1 {
       grid-area: seccion-1;
       text-align: center;
@@ -45,27 +45,28 @@
                 height: 100%; }
             .grilla-index .main .seccion-1 .ofertas-destacadas .ofertas-carrusel .carousel-inner .tarjeta .tarjeta-texto {
               height: 40%; }
-    .grilla-index .main .seccion-2, .grilla-index .main .seccion-3 {
+    .grilla-index .main .seccion-2, .grilla-index .main .seccion-3, .grilla-index .main .aside {
       grid-area: seccion-2;
       text-align: center;
       border: 5px solid black; }
-      .grilla-index .main .seccion-2 .ofertas-destacadas, .grilla-index .main .seccion-3 .ofertas-destacadas {
+      .grilla-index .main .seccion-2 .ofertas-destacadas, .grilla-index .main .seccion-3 .ofertas-destacadas, .grilla-index .main .aside .ofertas-destacadas {
         background-color: green;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
-        align-items: center; }
-        .grilla-index .main .seccion-2 .ofertas-destacadas .texto, .grilla-index .main .seccion-3 .ofertas-destacadas .texto {
+        align-items: center;
+        height: 100%; }
+        .grilla-index .main .seccion-2 .ofertas-destacadas .texto, .grilla-index .main .seccion-3 .ofertas-destacadas .texto, .grilla-index .main .aside .ofertas-destacadas .texto {
           background-color: aquamarine;
           margin: 1rem; }
-        .grilla-index .main .seccion-2 .ofertas-destacadas .caja-tarjetas, .grilla-index .main .seccion-3 .ofertas-destacadas .caja-tarjetas {
+        .grilla-index .main .seccion-2 .ofertas-destacadas .caja-tarjetas, .grilla-index .main .seccion-3 .ofertas-destacadas .caja-tarjetas, .grilla-index .main .aside .ofertas-destacadas .caja-tarjetas {
           background-color: lightgreen;
           display: flex;
           justify-content: center;
           align-items: center;
           flex-wrap: wrap;
           justify-content: flex-start; }
-          .grilla-index .main .seccion-2 .ofertas-destacadas .caja-tarjetas .tarjeta, .grilla-index .main .seccion-3 .ofertas-destacadas .caja-tarjetas .tarjeta {
+          .grilla-index .main .seccion-2 .ofertas-destacadas .caja-tarjetas .tarjeta, .grilla-index .main .seccion-3 .ofertas-destacadas .caja-tarjetas .tarjeta, .grilla-index .main .aside .ofertas-destacadas .caja-tarjetas .tarjeta {
             background-color: greenyellow;
             width: 13rem;
             margin: .5rem;
@@ -76,7 +77,7 @@
             justify-content: center;
             align-items: center;
             flex-direction: column; }
-            .grilla-index .main .seccion-2 .ofertas-destacadas .caja-tarjetas .tarjeta .imagen, .grilla-index .main .seccion-3 .ofertas-destacadas .caja-tarjetas .tarjeta .imagen {
+            .grilla-index .main .seccion-2 .ofertas-destacadas .caja-tarjetas .tarjeta .imagen, .grilla-index .main .seccion-3 .ofertas-destacadas .caja-tarjetas .tarjeta .imagen, .grilla-index .main .aside .ofertas-destacadas .caja-tarjetas .tarjeta .imagen {
               height: 50%;
               display: flex;
               justify-content: center;
@@ -85,9 +86,9 @@
               margin: 5px;
               border-radius: 3%;
               border: 2px solid black; }
-              .grilla-index .main .seccion-2 .ofertas-destacadas .caja-tarjetas .tarjeta .imagen img, .grilla-index .main .seccion-3 .ofertas-destacadas .caja-tarjetas .tarjeta .imagen img {
+              .grilla-index .main .seccion-2 .ofertas-destacadas .caja-tarjetas .tarjeta .imagen img, .grilla-index .main .seccion-3 .ofertas-destacadas .caja-tarjetas .tarjeta .imagen img, .grilla-index .main .aside .ofertas-destacadas .caja-tarjetas .tarjeta .imagen img {
                 height: 100%; }
-            .grilla-index .main .seccion-2 .ofertas-destacadas .caja-tarjetas .tarjeta .tarjeta-texto, .grilla-index .main .seccion-3 .ofertas-destacadas .caja-tarjetas .tarjeta .tarjeta-texto {
+            .grilla-index .main .seccion-2 .ofertas-destacadas .caja-tarjetas .tarjeta .tarjeta-texto, .grilla-index .main .seccion-3 .ofertas-destacadas .caja-tarjetas .tarjeta .tarjeta-texto, .grilla-index .main .aside .ofertas-destacadas .caja-tarjetas .tarjeta .tarjeta-texto {
               height: 40%;
               background-color: gray;
               border-radius: 3%;
@@ -96,6 +97,51 @@
       grid-area: seccion-3; }
     .grilla-index .main .aside {
       grid-area: aside; }
+      .grilla-index .main .aside .ofertas-destacadas {
+        justify-content: center; }
+        .grilla-index .main .aside .ofertas-destacadas .caja-tarjetas {
+          flex-direction: column;
+          flex-wrap: nowrap;
+          justify-content: space-evenly; }
+  .grilla-index .footer {
+    grid-area: footer;
+    position: relative;
+    background-color: gray;
+    border: 5px solid black;
+    height: 10rem;
+    display: inline-flex; }
+    .grilla-index .footer .texto {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-items: center; }
+    .grilla-index .footer .logos-redes {
+      position: absolute;
+      right: 1rem;
+      bottom: 1rem;
+      width: auto;
+      height: auto;
+      background-color: lightblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-items: end; }
+      .grilla-index .footer .logos-redes .redes {
+        width: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 0 4rem; }
+        .grilla-index .footer .logos-redes .redes a img {
+          width: 40px;
+          margin: .5rem; }
+        .grilla-index .footer .logos-redes .redes a:hover {
+          background-color: red; }
+      .grilla-index .footer .logos-redes .logo {
+        background-color: #155d75; }
+        .grilla-index .footer .logos-redes .logo a img {
+          height: 80px; }
 
 header {
   grid-area: header; }

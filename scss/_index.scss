@@ -2,22 +2,22 @@
 
 .grilla-index{
     display: grid;
-    grid-template-columns: 4fr 1fr;
-    grid-template-rows: auto 3fr 1fr;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
     grid-template-areas: 
-    "header header"
-    "main aside"
-    "footer footer";
+    "header"
+    "main"
+    "footer";
 
     .main{
         grid-area: main;
         display: grid;
-        grid-template-columns: auto;
+        grid-template-columns: 4fr 1fr;
         grid-template-rows: auto auto auto;
         grid-template-areas: 
-        "seccion-1"
-        "seccion-2"
-        "seccion-3";
+        "seccion-1 aside"
+        "seccion-2 aside"
+        "seccion-3 aside";
 
         .seccion-1{
             grid-area: seccion-1;
@@ -80,6 +80,7 @@
                 flex-direction: column;
                 justify-content: space-around;
                 align-items: center;
+                height: 100%;
 
                 .texto{
                     background-color: aquamarine;
@@ -133,7 +134,79 @@
         }
 
         .aside{
+            @extend .seccion-2;
             grid-area: aside;
+
+            .ofertas-destacadas{
+                justify-content: center;
+
+                .caja-tarjetas{
+                    flex-direction: column;
+                    flex-wrap: nowrap;
+                    justify-content: space-evenly;
+
+                }
+            }
         }
+    }
+    .footer{
+        grid-area: footer;
+        position: relative;
+
+        background-color: gray;
+        border: 5px solid black;
+        height: 10rem;
+
+        display: inline-flex;
+
+        .texto{
+            @include flex-center;
+            align-items: center;
+        }
+
+        .logos-redes{
+            position: absolute;
+            right: 1rem;
+            bottom: 1rem;
+            width: auto;
+            height: auto;
+
+            background-color: lightblue;
+            @include flex-center;
+            align-items: end;
+            
+            .redes{
+                width: $altura-redes*5;
+                @include flex-center;
+                justify-content: space-evenly;
+                margin: 0 4rem;
+
+                a{
+
+                    img{
+                        width: $altura-redes;
+                        margin: .5rem;
+                    }
+
+                    &:hover{
+                        background-color: red;
+                    }
+                }
+            }
+
+            .logo{
+                background-color: rgb(21, 93, 117);
+
+                a{
+                    
+                    img{
+                        height: $altura-logo;
+                    }
+
+                }
+                
+            }
+        }
+
     }
 }
