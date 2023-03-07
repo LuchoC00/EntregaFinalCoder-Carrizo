@@ -1,0 +1,11 @@
+@mixin flex-center($column:"col"){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin tarjeta-estilo(){
+    border: 5px solid black;
+    border-radius: 5%;
+    background-color: rgb(184, 185, 187);
+}

@@ -3,18 +3,114 @@
   padding: 0;
   box-sizing: border-box; }
 
-nav .container-fluid .container {
-  background-color: aqua; }
+/* Estilos referenciales a la pagina "index" */
+.grilla-index {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: auto 3fr 1fr;
+  grid-template-areas: "header header" "main aside" "footer footer"; }
+  .grilla-index .main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "seccion-1" "seccion-2" "seccion-3"; }
+    .grilla-index .main .seccion-1 {
+      grid-area: seccion-1;
+      text-align: center;
+      background-color: green; }
+      .grilla-index .main .seccion-1 .texto {
+        padding: .5rem 1rem; }
+      .grilla-index .main .seccion-1 .ofertas-destacadas {
+        background-color: lightgreen;
+        margin: 1rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center; }
+        .grilla-index .main .seccion-1 .ofertas-destacadas .ofertas-carrusel {
+          margin: 1rem; }
+          .grilla-index .main .seccion-1 .ofertas-destacadas .ofertas-carrusel .carousel-inner .tarjeta {
+            border: 5px solid black;
+            border-radius: 5%;
+            background-color: #b8b9bb;
+            background-color: gray; }
+            .grilla-index .main .seccion-1 .ofertas-destacadas .ofertas-carrusel .carousel-inner .tarjeta .imagen {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              margin: 5px;
+              height: 50%; }
+              .grilla-index .main .seccion-1 .ofertas-destacadas .ofertas-carrusel .carousel-inner .tarjeta .imagen img {
+                height: 100%; }
+            .grilla-index .main .seccion-1 .ofertas-destacadas .ofertas-carrusel .carousel-inner .tarjeta .tarjeta-texto {
+              height: 40%; }
+    .grilla-index .main .seccion-2 {
+      grid-area: seccion-2;
+      text-align: center;
+      border: 5px solid black; }
+      .grilla-index .main .seccion-2 .ofertas-destacadas {
+        background-color: green;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center; }
+        .grilla-index .main .seccion-2 .ofertas-destacadas .texto {
+          background-color: aquamarine;
+          margin: 1rem; }
+        .grilla-index .main .seccion-2 .ofertas-destacadas .caja-tarjetas {
+          background-color: lightgreen;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start; }
+          .grilla-index .main .seccion-2 .ofertas-destacadas .caja-tarjetas .tarjeta {
+            background-color: greenyellow;
+            width: 18%;
+            margin: .5rem;
+            border: 5px solid black;
+            border-radius: 5%;
+            background-color: #b8b9bb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; }
+            .grilla-index .main .seccion-2 .ofertas-destacadas .caja-tarjetas .tarjeta .imagen {
+              height: 50%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              margin: 5px;
+              border-radius: 3%;
+              border: 2px solid black; }
+              .grilla-index .main .seccion-2 .ofertas-destacadas .caja-tarjetas .tarjeta .imagen img {
+                height: 100%; }
+            .grilla-index .main .seccion-2 .ofertas-destacadas .caja-tarjetas .tarjeta .tarjeta-texto {
+              height: 40%;
+              background-color: gray;
+              border-radius: 3%;
+              margin: 5px; }
 
-nav .container-fluid #navbarNav ul li {
-  margin: .5rem; }
-  nav .container-fluid #navbarNav ul li a {
-    width: 100%;
-    background-color: gray;
-    padding: .5rem 1rem;
-    border: solid .15rem black;
-    border-radius: 20%; }
-    nav .container-fluid #navbarNav ul li a:hover {
-      background-color: #535353;
-      color: white;
-      transform: scale(1.1); }
+header {
+  grid-area: header; }
+
+nav .container-fluid {
+  background-color: aquamarine; }
+  nav .container-fluid .container a {
+    background-color: aqua;
+    padding: .5rem .5rem 0 0; }
+    nav .container-fluid .container a:hover {
+      background-color: red;
+      color: white; }
+  nav .container-fluid #navbarNav ul li {
+    margin: .5rem; }
+    nav .container-fluid #navbarNav ul li a {
+      width: 100%;
+      background-color: gray;
+      padding: .5rem 1rem;
+      border: solid .15rem black;
+      border-radius: 20%; }
+      nav .container-fluid #navbarNav ul li a:hover {
+        background-color: #535353;
+        color: white;
+        transform: scale(1.1); }
