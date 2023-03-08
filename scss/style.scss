@@ -9,6 +9,21 @@
 @import "index";
 
 
+.texto{
+    h1{
+        font-size: $tamaño-titulo*1.2;
+    }
+    h2{
+        font-size: $tamaño-titulo;
+    }
+    h5{
+        font-size: $tamaño-subtitulo;
+    }
+    p{
+        font-size: $tamaño-general;
+    }
+}
+
 header{
     grid-area: header;
 
@@ -45,7 +60,7 @@ header{
             #navbarNav{
     
                 ul{
-    
+                    width: 60%;
                     li{
                         margin: .5rem;
                         
@@ -74,3 +89,4 @@ header{
     }    
 }
 
+@import "responsive";
