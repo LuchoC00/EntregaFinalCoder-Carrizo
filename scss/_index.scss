@@ -19,27 +19,42 @@
         "seccion-2 aside"
         "seccion-3 aside";
 
+        background-image: linear-gradient(rgb(46, 46, 46), rgb(173, 173, 173));
+
         .seccion-1{
             grid-area: seccion-1;
             text-align: center;
-            background-color: green;
+            border: 5px solid black;
 
             .texto{
-                padding: .5rem 1rem;
+                padding: 2rem 2rem 1rem 2rem;
+                background-color: rgba(0, 0, 0, 0.2);
+                color: white;
             }
 
             .ofertas-destacadas{
-                background-color: lightgreen;
+                background-image: url(../assets/images/naek-fondo.jpg);
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: center;
                 margin: 1rem;
 
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
 
+                .texto{
+                    border-radius: 50%;
+                }
+
                 .ofertas-carrusel{
-                    margin: 1rem;
+                    margin: 1rem;   
 
                     .carousel-inner{
+
+                        .bg-secondary{
+                            background-color: rgba(255, 255, 255, .5)
+                        }
                         
                         .tarjeta{
 
@@ -61,6 +76,8 @@
 
                             .tarjeta-texto{
                                 height: 40%;
+                                color: black;
+                                padding: 10px;
                             }
                         }
                     }
@@ -74,8 +91,6 @@
             border: 5px solid black;
 
             .ofertas-destacadas{
-                background-color: green;
-
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
@@ -83,12 +98,15 @@
                 height: 100%;
 
                 .texto{
-                    background-color: aquamarine;
+                    background-color: rgba(0, 0, 0, 0.2);
                     margin: 1rem;
+                    color: white;
+                    padding: 1rem;
+                    border-radius: 3%;
                 }
 
                 .caja-tarjetas{
-                    background-color: lightgreen;
+                    background-color: rgba(207, 207, 207, 0.2);
 
                     @include flex-center;
                     flex-wrap: wrap;
@@ -97,11 +115,13 @@
                     .tarjeta{
                         background-color: greenyellow;
                         width: $tamaño-tarjeta;
+                        height: $tamaño-tarjeta*1.5;
                         margin: .5rem;
 
                         @include tarjeta-estilo;                                            
                         @include flex-center;
                         flex-direction: column;
+
 
                         .imagen{
                             height: 50%;
@@ -119,9 +139,15 @@
 
                         .tarjeta-texto{
                             height: 40%;
-                            background-color: gray;
+                            background-color: rgb(112, 112, 112);
                             border-radius: 3%;
                             margin: 5px;
+                            padding: 5px;
+                            color: white;
+
+                            &:hover{
+                                color: rgb(0, 0, 0);
+                            }
                         }
                     }
                 }
@@ -136,15 +162,30 @@
         .aside{
             @extend .seccion-2;
             grid-area: aside;
+            background-color: rgba(20, 20, 20,.4);
 
             .ofertas-destacadas{
                 justify-content: center;
+
+                .texto{
+                    border-radius: 5%;
+                }
 
                 .caja-tarjetas{
                     flex-direction: column;
                     flex-wrap: nowrap;
                     justify-content: space-evenly;
 
+                    .tarjeta{
+                        
+                        .tarjeta-texto{
+                            color: black;
+
+                            &:hover{
+                                color: white;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -153,15 +194,18 @@
         grid-area: footer;
         position: relative;
 
-        background-color: gray;
+        background-color: rgb(41, 41, 41);
         border: 5px solid black;
-        height: 10rem;
+        height: 7rem;
 
         display: inline-flex;
 
         .texto{
             @include flex-center;
             align-items: center;
+            color: white;
+            margin: 1rem;
+            padding: .5rem .5rem .5rem 3rem;
         }
 
         .logos-redes{
@@ -171,7 +215,6 @@
             width: auto;
             height: auto;
 
-            background-color: lightblue;
             @include flex-center;
             align-items: end;
             
@@ -189,16 +232,21 @@
                     }
 
                     &:hover{
-                        background-color: red;
+                        background-color: rgb(255, 255, 255);
+                        border-radius: 25%;
                     }
                 }
             }
 
             .logo{
-                background-color: rgb(21, 93, 117);
+                background-color: rgb(27, 56, 66);
+                border-radius: 50%;
 
+                &:hover{
+                    background-color: white;
+                }
                 a{
-                    
+
                     img{
                         height: $altura-logo;
                     }
