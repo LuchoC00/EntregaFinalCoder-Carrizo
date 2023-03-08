@@ -1,0 +1,57 @@
+
+
+.grilla-algo{
+    background-image: linear-gradient(rgb(105, 45, 155), rgb(68, 68, 151));
+    height: 50rem;
+
+    #main{
+        background-image: url(../assets/images/naek.png) ;
+        background-repeat: no-repeat ;
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+
+        .error{
+            @include flex-center;
+            flex-direction: column;
+            padding: .5rem;
+            text-decoration: none;
+            height: 100%;
+
+            &:hover{
+                .caja{
+                    transform: scale(.7);
+                    padding: 1px;
+                }                
+            }
+            
+            .caja{
+                @include flex-center;
+                flex-direction: column;
+                padding: .5rem;
+
+                img{
+                    width: 70%;
+                    padding: 1rem;
+                    margin: 2rem;
+                }
+
+                h2{
+                    font-size: $tamaño-titulo*3;
+                    color: maroon;
+                }
+                                               
+                .texto{
+                    color: maroon;
+                    text-align: center;
+                    @include flex-center;
+                    flex-direction: column;
+
+                    p{
+                        font-size: $tamaño-general*3;
+                    }
+                }
+            }
+        }
+    }
+}

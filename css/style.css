@@ -196,7 +196,7 @@
       .grilla-empresa #seccion-1 .caja img {
         margin: .3rem; }
         .grilla-empresa #seccion-1 .caja img.logo {
-          width: 25%; }
+          width: 5%; }
         .grilla-empresa #seccion-1 .caja img.imagen {
           width: 85%; }
     .grilla-empresa #seccion-1 .caja-2 {
@@ -217,6 +217,49 @@
         font-size: 1rem; }
       .grilla-empresa #seccion-2 .texto .caja {
         margin: 1rem; }
+
+.grilla-algo {
+  background-image: linear-gradient(#692d9b, #444497);
+  height: 50rem; }
+  .grilla-algo #main {
+    background-image: url(../assets/images/naek.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%; }
+    .grilla-algo #main .error {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: .5rem;
+      text-decoration: none;
+      height: 100%; }
+      .grilla-algo #main .error:hover .caja {
+        transform: scale(0.7);
+        padding: 1px; }
+      .grilla-algo #main .error .caja {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: .5rem; }
+        .grilla-algo #main .error .caja img {
+          width: 70%;
+          padding: 1rem;
+          margin: 2rem; }
+        .grilla-algo #main .error .caja h2 {
+          font-size: 6rem;
+          color: maroon; }
+        .grilla-algo #main .error .caja .texto {
+          color: maroon;
+          text-align: center;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column; }
+          .grilla-algo #main .error .caja .texto p {
+            font-size: 3rem; }
 
 .texto h1 {
   font-size: 2.4rem; }
