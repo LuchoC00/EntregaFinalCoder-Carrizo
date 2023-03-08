@@ -3,31 +3,53 @@
     padding: 0;
     box-sizing: border-box;
 }
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
 
 @import "variables" ;
 @import "funciones";
 @import "index";
+/* Contacto */
 @import "contacto";
+/* Empresa */
 @import "empresa";
+/* Ventas */
 @import "ventas";
 
-.texto{
-    h1{
-        font-size: $tamaño-titulo*1.2;
-    }
-    h2{
-        font-size: $tamaño-titulo;
-    }
-    h5{
-        font-size: $tamaño-subtitulo;
-    }
-    p{
-        font-size: $tamaño-general;
-    }
+//estilos globales
+
+h1{
+    font-size: $tamaño-titulo*1.8;
+    font-family: 'Mulish', sans-serif;
 }
+h2{
+    font-size: $tamaño-titulo;
+    font-family: 'Shantell Sans', cursive;
+}
+
+h3{
+    font-size: $tamaño-titulo*.8;
+    font-family: 'Fira Sans', sans-serif
+}
+h5{
+    font-size: $tamaño-subtitulo;
+    font-family: 'Fira Sans', sans-serif;}
+p{
+    font-size: $tamaño-general;
+    font-family: 'Raleway', sans-serif;
+}
+
+
+/* Header-nav */
 
 header{
     grid-area: header;
+    position: sticky;
+    width: 100%;
+    top: 0%;
+    z-index: 50;
 
     nav{
 
@@ -40,6 +62,8 @@ header{
                     background-color: rgba(202, 202, 202, 0.5);
                     padding: .5rem .5rem 0 0;
                     border-radius: 25%;
+                    @include flex-center;
+                    align-items: baseline;
 
                     .logo{
                         background-color: white;
@@ -53,6 +77,10 @@ header{
                         .logo{
                             background-color: rgb(84, 164, 190);
                         }
+                    }
+
+                    p{
+                        font-family: 'Mulish', sans-serif;
                     }
 
                 }
@@ -91,6 +119,8 @@ header{
     }    
 }
 
+/* Footer */
+
 .footer{
     grid-area: footer;
     position: relative;
@@ -125,7 +155,7 @@ header{
             width: $altura-redes*5;
             @include flex-center;
             justify-content: space-evenly;
-            margin: 0 4rem;
+            margin: 0 2rem;
 
             a{
 
@@ -137,11 +167,15 @@ header{
                 &:hover{
                     background-color: rgb(255, 255, 255);
                     border-radius: 25%;
+                    animation: vibrar .15s ease 0s 1;                    
                 }
             }
         }
 
         .logo{
+            position: relative;
+            bottom: 25%;
+
             background-color: rgb(27, 56, 66);
             border-radius: 50%;
 
@@ -160,5 +194,7 @@ header{
     }
 
 }
+
+@import "animaciones";
 
 @import "responsive";

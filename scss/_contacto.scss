@@ -3,22 +3,34 @@
     grid-template-columns: auto;
     grid-template-rows: auto auto;
     grid-template-areas: "seccion-1" "footer";
-    background-image: linear-gradient(rgb(105, 45, 155), rgb(68, 68, 151));
+    background-image: linear-gradient(rgb(46, 46, 46), rgb(173, 173, 173));
 
     #seccion-1{
         grid-area: seccion-1;
         @include flex-center;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
 
         .caja{
             @include flex-center;
-            flex-direction: column;
-            padding: 1rem;
+            flex-direction: row;
+
+            padding: .2rem;
+            margin: 2rem;
+            border: 2px solid black;
+            border-radius: 5%;
 
             .subcaja{
                 @include flex-center;
                 flex-direction: column;
-
+                .contacto-imagen{
+                    border: 2px solid black;
+                    border-radius: 5%;
+                    margin: 1rem;
+                }
+                
                 .social{
                     text-decoration: none;
                     width: 50%;
@@ -26,14 +38,18 @@
                     margin: auto;
 
                     img{
-                        width: 15%;
+                        width: 12%;
                     }
                     
                     p{
-                        font-size: 1rem;
+                        font-size: $tamaño-subtitulo;
                         color: rgb(37, 35, 35);
 
-                        &:hover{
+
+                    }
+
+                    &:hover{
+                        p{
                             color: rgb(20, 212, 148)
                         }
                     }

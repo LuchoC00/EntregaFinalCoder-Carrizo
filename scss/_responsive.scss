@@ -37,11 +37,17 @@
             "aside";
 
             .seccion-1{
+
                 .ofertas-destacadas{
                     flex-direction: column;
+                    background-size: 250%;
 
                     .texto{
                         width: 80%;
+                    }
+
+                    .ofertas-carrusel{
+                        width: 50%;
                     }
                 }
             }
@@ -52,6 +58,8 @@
 
                     .caja-tarjetas{
                         flex-direction: row;
+                        flex-wrap: wrap;
+                        justify-content: flex-start;
                     }
                 }
             }
@@ -63,7 +71,7 @@
 
         .texto{
             text-align: start;
-            width: 70%;
+            width: 60%;
         }
 
         .logos-redes{
@@ -75,6 +83,20 @@
                 margin: 0 .1rem;
                 padding: 0;
                 flex-direction: column;
+
+                a{
+                    img{
+                        height: $altura-redes*.8;
+                        width: $altura-redes*.8;
+                    }
+                }
+            }
+        }
+        .logo{
+            a{
+                img{
+                    height: $altura-logo*.8;
+                }
             }
         }
     }
@@ -83,6 +105,15 @@
 
         .caja{
             flex-direction: column;
+        }
+    }
+
+    .grilla-contacto{
+        #seccion-1{
+            .caja{
+                flex-direction: column;
+                border-radius: 15%;
+            }
         }
     }
 }

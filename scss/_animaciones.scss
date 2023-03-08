@@ -1,0 +1,13 @@
+
+
+@keyframes vibrar {
+    0%,100%{
+        position: relative;
+    }
+    33%{
+        right: 3px;
+    }
+    66%{
+        left: 3px;
+    }
+}

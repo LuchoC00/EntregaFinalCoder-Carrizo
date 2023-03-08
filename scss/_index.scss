@@ -45,12 +45,12 @@
 
                 .texto{
                     border-radius: 50%;
-                    width: 45%;
+                    width: 50%;
                 }
 
                 .ofertas-carrusel{
                     margin: 1rem; 
-                    width: 50%;
+                    width: 30%;
 
                     .carousel-inner{
 
@@ -143,7 +143,11 @@
                             padding: 5px;
                             color: white;
 
-                            &:hover{
+                        }
+
+                        &:hover{
+
+                            .tarjeta-texto{
                                 color: rgb(0, 0, 0);
                             }
                         }
@@ -178,9 +182,15 @@
                         
                         .tarjeta-texto{
                             color: black;
+                        }
 
-                            &:hover{
+                        &:hover{
+                            
+                            .tarjeta-texto{
                                 color: white;
+                                p,h5{
+                                    animation: vibrar .15s ease 0s 1;
+                                }
                             }
                         }
                     }

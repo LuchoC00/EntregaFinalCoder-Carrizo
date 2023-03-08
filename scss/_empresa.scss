@@ -3,7 +3,7 @@
     grid-template-columns: auto;
     grid-template-rows: auto auto;
     grid-template-areas: "seccion-1" "seccion-2";
-    background-image: linear-gradient(rgb(46, 46, 46), rgb(173, 173, 173));
+    background-image: linear-gradient(rgb(70, 70, 70), rgb(173, 173, 173));
 
     #seccion-1{
         grid-area: seccion-1;
@@ -18,10 +18,11 @@
 
             h1{
                 font-size: $tamaño-titulo;
+                color: white;
             }
 
             p{
-                font-size: $tamaño-general;
+                font-size: $tamaño-subtitulo;
                 padding: 0 4rem;
             }
 
@@ -34,6 +35,8 @@
 
                 &.imagen{
                     width: 85%;
+                    border: 5px solid black;
+                    border-radius: 3%;
                 }
             }
         }
@@ -54,7 +57,7 @@
             padding: 1rem;
 
             p{
-                font-size: $tamaño-general;
+                font-size: $tamaño-subtitulo;
             }
 
             .caja{
