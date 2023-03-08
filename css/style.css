@@ -130,53 +130,96 @@
             color: black; }
             .grilla-index .main .aside .ofertas-destacadas .caja-tarjetas .tarjeta .tarjeta-texto:hover {
               color: white; }
-  .grilla-index .footer {
-    grid-area: footer;
-    position: relative;
-    background-color: #292929;
-    border: 5px solid black;
-    height: 7rem;
-    display: inline-flex; }
-    .grilla-index .footer .texto {
+
+.grilla-contacto {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: "seccion-1" "footer";
+  background-image: linear-gradient(#692d9b, #444497); }
+  .grilla-contacto #seccion-1 {
+    grid-area: seccion-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .grilla-contacto #seccion-1 .caja {
       display: flex;
       justify-content: center;
       align-items: center;
-      align-items: center;
-      color: white;
-      margin: 1rem;
-      padding: .5rem .5rem .5rem 3rem;
-      width: 55%;
-      text-align: center; }
-    .grilla-index .footer .logos-redes {
-      position: absolute;
-      right: 1rem;
-      bottom: 1rem;
-      width: auto;
-      height: auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      align-items: end; }
-      .grilla-index .footer .logos-redes .redes {
-        width: 200px;
+      flex-direction: column;
+      padding: 1rem; }
+      .grilla-contacto #seccion-1 .caja .subcaja {
         display: flex;
         justify-content: center;
         align-items: center;
-        justify-content: space-evenly;
-        margin: 0 4rem; }
-        .grilla-index .footer .logos-redes .redes a img {
-          width: 40px;
-          margin: .5rem; }
-        .grilla-index .footer .logos-redes .redes a:hover {
-          background-color: white;
-          border-radius: 25%; }
-      .grilla-index .footer .logos-redes .logo {
-        background-color: #1b3842;
-        border-radius: 50%; }
-        .grilla-index .footer .logos-redes .logo:hover {
-          background-color: white; }
-        .grilla-index .footer .logos-redes .logo a img {
-          height: 80px; }
+        flex-direction: column; }
+        .grilla-contacto #seccion-1 .caja .subcaja .social {
+          text-decoration: none;
+          width: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin: auto; }
+          .grilla-contacto #seccion-1 .caja .subcaja .social img {
+            width: 15%; }
+          .grilla-contacto #seccion-1 .caja .subcaja .social p {
+            font-size: 1rem;
+            color: #252323; }
+            .grilla-contacto #seccion-1 .caja .subcaja .social p:hover {
+              color: #14d494; }
+
+.grilla-empresa {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto;
+  grid-template-areas: "seccion-1" "seccion-2";
+  background-image: linear-gradient(#2e2e2e, #adadad); }
+  .grilla-empresa #seccion-1 {
+    grid-area: seccion-1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .grilla-empresa #seccion-1 .caja {
+      width: 100%;
+      padding: 1rem;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      .grilla-empresa #seccion-1 .caja h1 {
+        font-size: 2rem; }
+      .grilla-empresa #seccion-1 .caja p {
+        font-size: 1rem;
+        padding: 0 4rem; }
+      .grilla-empresa #seccion-1 .caja img {
+        margin: .3rem; }
+        .grilla-empresa #seccion-1 .caja img.logo {
+          width: 25%; }
+        .grilla-empresa #seccion-1 .caja img.imagen {
+          width: 85%; }
+    .grilla-empresa #seccion-1 .caja-2 {
+      flex-direction: column; }
+      .grilla-empresa #seccion-1 .caja-2 img {
+        margin: 1rem; }
+  .grilla-empresa #seccion-2 {
+    grid-area: seccion-2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .grilla-empresa #seccion-2 .texto {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 1rem; }
+      .grilla-empresa #seccion-2 .texto p {
+        font-size: 1rem; }
+      .grilla-empresa #seccion-2 .texto .caja {
+        margin: 1rem; }
 
 .texto h1 {
   font-size: 2.4rem; }
@@ -224,6 +267,54 @@ header {
             color: #ffee00;
             transform: scale(0.9); }
 
+.footer {
+  grid-area: footer;
+  position: relative;
+  background-color: #292929;
+  border: 5px solid black;
+  height: 7rem;
+  display: inline-flex; }
+  .footer .texto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    color: white;
+    margin: 1rem;
+    padding: .5rem .5rem .5rem 3rem;
+    width: 55%;
+    text-align: center; }
+  .footer .logos-redes {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: end; }
+    .footer .logos-redes .redes {
+      width: 200px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-evenly;
+      margin: 0 4rem; }
+      .footer .logos-redes .redes a img {
+        width: 40px;
+        margin: .5rem; }
+      .footer .logos-redes .redes a:hover {
+        background-color: white;
+        border-radius: 25%; }
+    .footer .logos-redes .logo {
+      background-color: #1b3842;
+      border-radius: 50%; }
+      .footer .logos-redes .logo:hover {
+        background-color: white; }
+      .footer .logos-redes .logo a img {
+        height: 80px; }
+
 @media only screen and (max-width: 768px) {
   .grilla-index .container-fluid {
     background-color: white; }
@@ -241,4 +332,17 @@ header {
       .grilla-index .main .seccion-1 .ofertas-destacadas .texto {
         width: 80%; }
     .grilla-index .main .aside .ofertas-destacadas .caja-tarjetas {
-      flex-direction: row; } }
+      flex-direction: row; }
+  .footer {
+    height: auto; }
+    .footer .texto {
+      text-align: start;
+      width: 70%; }
+    .footer .logos-redes {
+      width: 30%;
+      bottom: 2%;
+      position: relative; }
+      .footer .logos-redes .redes {
+        margin: 0 .1rem;
+        padding: 0;
+        flex-direction: column; } }

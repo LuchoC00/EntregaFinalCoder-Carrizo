@@ -1,0 +1,44 @@
+.grilla-contacto{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "seccion-1" "footer";
+    background-image: linear-gradient(rgb(105, 45, 155), rgb(68, 68, 151));
+
+    #seccion-1{
+        grid-area: seccion-1;
+        @include flex-center;
+        flex-direction: column;
+
+        .caja{
+            @include flex-center;
+            flex-direction: column;
+            padding: 1rem;
+
+            .subcaja{
+                @include flex-center;
+                flex-direction: column;
+
+                .social{
+                    text-decoration: none;
+                    width: 50%;
+                    @include flex-center;
+                    margin: auto;
+
+                    img{
+                        width: 15%;
+                    }
+                    
+                    p{
+                        font-size: 1rem;
+                        color: rgb(37, 35, 35);
+
+                        &:hover{
+                            color: rgb(20, 212, 148)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

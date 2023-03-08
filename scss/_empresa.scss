@@ -1,0 +1,70 @@
+.grilla-empresa{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto;
+    grid-template-areas: "seccion-1" "seccion-2";
+    background-image: linear-gradient(rgb(46, 46, 46), rgb(173, 173, 173));
+
+    #seccion-1{
+        grid-area: seccion-1;
+        @include flex-center;
+        flex-direction: column;
+
+        .caja{
+            width: 100%;
+            padding: 1rem;
+            text-align: center;
+            @include flex-center;
+            flex-direction: column;   
+
+            h1{
+                font-size: $tamaño-titulo;
+            }
+
+            p{
+                font-size: $tamaño-general;
+                padding: 0 4rem;
+            }
+
+            img{
+                margin: .3rem;
+
+                &.logo{
+                    width: 25%;
+                }
+
+                &.imagen{
+                    width: 85%;
+                }
+            }
+        }
+                
+        .caja-2{
+            flex-direction: column;
+            
+            img{
+                margin: 1rem;
+            }
+        }
+
+    }
+    #seccion-2{
+        grid-area: seccion-2;
+        @include flex-center;
+        flex-direction: column;
+
+        .texto{
+            @include flex-center;
+            justify-content: space-evenly;
+            padding: 1rem;
+
+            p{
+                font-size: $tamaño-general;
+            }
+
+            .caja{
+                margin: 1rem;
+            }
+        }
+    }
+}

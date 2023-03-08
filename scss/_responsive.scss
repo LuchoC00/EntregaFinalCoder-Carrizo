@@ -48,4 +48,25 @@
             }
         }
     }
+
+    .footer{
+        height: auto;
+
+        .texto{
+            text-align: start;
+            width: 70%;
+        }
+
+        .logos-redes{
+            width: 30%;
+            bottom: 2%;
+            position: relative;
+
+            .redes{
+                margin: 0 .1rem;
+                padding: 0;
+                flex-direction: column;
+            }
+        }
+    }
 }

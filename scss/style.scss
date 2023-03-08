@@ -7,7 +7,8 @@
 @import "variables" ;
 @import "funciones";
 @import "index";
-
+@import "contacto";
+@import "empresa";
 
 .texto{
     h1{
@@ -87,6 +88,76 @@ header{
             }
         }
     }    
+}
+
+.footer{
+    grid-area: footer;
+    position: relative;
+
+    background-color: rgb(41, 41, 41);
+    border: 5px solid black;
+    height: 7rem;
+
+    display: inline-flex;
+
+    .texto{
+        @include flex-center;
+        align-items: center;
+        color: white;
+        margin: 1rem;
+        padding: .5rem .5rem .5rem 3rem;
+        width: 55%;
+        text-align: center;
+    }
+
+    .logos-redes{
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+        width: auto;
+        height: auto;
+
+        @include flex-center;
+        align-items: end;
+        
+        .redes{
+            width: $altura-redes*5;
+            @include flex-center;
+            justify-content: space-evenly;
+            margin: 0 4rem;
+
+            a{
+
+                img{
+                    width: $altura-redes;
+                    margin: .5rem;
+                }
+
+                &:hover{
+                    background-color: rgb(255, 255, 255);
+                    border-radius: 25%;
+                }
+            }
+        }
+
+        .logo{
+            background-color: rgb(27, 56, 66);
+            border-radius: 50%;
+
+            &:hover{
+                background-color: white;
+            }
+            a{
+
+                img{
+                    height: $altura-logo;
+                }
+
+            }
+            
+        }
+    }
+
 }
 
 @import "responsive";
