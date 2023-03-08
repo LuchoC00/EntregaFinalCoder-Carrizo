@@ -15,7 +15,6 @@
             padding: 1rem;
             text-align: center;
             @include flex-center;
-            flex-direction: column;   
 
             h1{
                 font-size: $tamaño-titulo;
@@ -41,10 +40,6 @@
                 
         .caja-2{
             flex-direction: column;
-            
-            img{
-                margin: 1rem;
-            }
         }
 
     }

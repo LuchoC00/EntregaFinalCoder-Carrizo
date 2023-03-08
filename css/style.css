@@ -187,8 +187,7 @@
       text-align: center;
       display: flex;
       justify-content: center;
-      align-items: center;
-      flex-direction: column; }
+      align-items: center; }
       .grilla-empresa #seccion-1 .caja h1 {
         font-size: 2rem; }
       .grilla-empresa #seccion-1 .caja p {
@@ -202,8 +201,6 @@
           width: 85%; }
     .grilla-empresa #seccion-1 .caja-2 {
       flex-direction: column; }
-      .grilla-empresa #seccion-1 .caja-2 img {
-        margin: 1rem; }
   .grilla-empresa #seccion-2 {
     grid-area: seccion-2;
     display: flex;
@@ -316,11 +313,11 @@ header {
         height: 80px; }
 
 @media only screen and (max-width: 768px) {
-  .grilla-index .container-fluid {
+  header nav .container-fluid {
     background-color: white; }
-    .grilla-index .container-fluid #navbarNav ul {
+    header nav .container-fluid #navbarNav ul {
       width: auto; }
-      .grilla-index .container-fluid #navbarNav ul a {
+      header nav .container-fluid #navbarNav ul li a {
         text-align: center;
         border-radius: 0%; }
   .grilla-index .main {
@@ -345,4 +342,6 @@ header {
       .footer .logos-redes .redes {
         margin: 0 .1rem;
         padding: 0;
-        flex-direction: column; } }
+        flex-direction: column; }
+  .grilla-empresa .caja {
+    flex-direction: column; } }

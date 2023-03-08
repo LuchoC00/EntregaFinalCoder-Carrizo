@@ -1,22 +1,31 @@
 
 
 @media only screen and (max-width: 768px){
-    .grilla-index{
 
-        .container-fluid{
-            background-color: white;
+    header{
+        nav{
+            .container-fluid{
+                background-color: white;
+        
+                #navbarNav{
+        
+                    ul{
+                        width: auto;
+                        li{
+                            a{
+                                text-align: center;
+                                border-radius: 0%;
+                            }
+                        }
 
-            #navbarNav{
-                ul{
-                    width: auto;
-                    a{
-                        text-align: center;
-                        border-radius: 0%;
                     }
                 }
-            
             }
         }
+    }
+
+
+    .grilla-index{
 
         .main{
             grid-template-columns: auto;
@@ -67,6 +76,13 @@
                 padding: 0;
                 flex-direction: column;
             }
+        }
+    }
+
+    .grilla-empresa{
+
+        .caja{
+            flex-direction: column;
         }
     }
 }
